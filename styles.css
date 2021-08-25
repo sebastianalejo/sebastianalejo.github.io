@@ -1,0 +1,29 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    background-color: #C8CDE5;
+    color: #4E5255;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #C8CDE5;
+    font-size: 30px;
+    background-color: #4E5255;
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin: 5px;
+}
+
+a:hover {
+    color: #D0EDF1;
+}
+
+p {
+    font-size: 30px;
+}
