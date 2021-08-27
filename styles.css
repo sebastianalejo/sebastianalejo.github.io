@@ -1,8 +1,8 @@
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
-    background-color: #C8CDE5;
-    color: #4E5255;
+    background-color: #F9DCE1;
+    color: #163D57;
 }
 
 h1 {
@@ -14,8 +14,8 @@ h1 {
 h2 {
     display: inline-block;
     font-size: 32px;
-    color: #C8CDE5;
-    background-color: #4E5255;
+    color: #163D57;
+    background-color: #D0EDF1;
     padding: 5px 15px;
     border-radius: 90px;
 }
@@ -23,13 +23,13 @@ h2 {
 a {
     display: inline-block;
     text-decoration: none;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
     margin: 0px 15px;
 }
 
 a:hover {
-    color: #D0EDF1;
+    color: #26727E;
 }
 
 p {
