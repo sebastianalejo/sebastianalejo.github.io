@@ -5,35 +5,3 @@
     color: #163D57;
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    margin-top: 18px;
-}
-
-h2 {
-    display: inline-block;
-    font-size: 36px;
-    color: #163D57;
-    background-color: #D0EDF1;
-    padding: 5px 15px;
-    border-radius: 90px;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 36px;
-    margin: 0px 15px;
-}
-
-a:hover {
-    color: #26727E;
-}
-
-p {
-    margin-top: 0%;
-    margin-bottom: 0%;
-    font-size: 36px;
-}
