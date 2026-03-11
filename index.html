@@ -3,342 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sebastian Alejo — Systems Engineer student from Lima, Peru. Python, SQL, Automation, Web Development." />
-  <title>Sebastian Alejo — Systems Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css">
+  <title>Sebastian Alejo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0a0a0f;
+    color: #e8e8f0;
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(#1e1e2e 1px, transparent 1px),
+      linear-gradient(90deg, #1e1e2e 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.3;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    pointer-events: none;
+  }
+
+  .glow {
+    position: fixed;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(127,255,212,0.07) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #7fffd4;
+    letter-spacing: -0.02em;
+    margin-bottom: 3.5rem;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3.2rem, 10vw, 6.5rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.2rem;
+  }
+
+  h1 span {
+    -webkit-text-stroke: 1px rgba(127,255,212,0.4);
+    color: transparent;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    color: #6b6b80;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+  }
+
+  .question {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #6b6b80;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .lang-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1.9rem 3.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #1e1e2e;
+    background: #13131c;
+    color: #e8e8f0;
+    transition: all 0.25s;
+    min-width: 190px;
+  }
+
+  .lang-btn:hover {
+    border-color: rgba(127,255,212,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(127,255,212,0.1);
+  }
+
+  .lang-btn .flag { font-size: 2.6rem; }
+
+  .lang-btn .lang-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .lang-btn .lang-label {
+    font-size: 0.8rem;
+    color: #6b6b80;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .lang-btn.primary { border-color: rgba(127,255,212,0.3); }
+  .lang-btn.primary .lang-name { color: #7fffd4; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 1.5rem; }
+    h1 { font-size: clamp(1.8rem, 11vw, 3rem); margin-bottom: 1rem; }
+    .question { font-size: 0.82rem; margin-bottom: 1.2rem; }
+    .buttons { flex-direction: column; align-items: center; }
+    .lang-btn { min-width: 80%; padding: 1.2rem 1.8rem; }
+  }
+  </style>
 </head>
 <body>
-
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <nav id="navbar">
-    <a href="#" class="nav-logo">SA/</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-tag">
-        <div class="status-dot"></div>
-        Lima, Peru · Open to opportunities
-      </div>
-      <h1 class="hero-name">Sebastian<br/><span>Alejo</span></h1>
-      <p class="hero-role">Systems Engineer · Python · SQL · Automation</p>
-      <p class="hero-desc">
-        Computer Systems Engineering student with hands-on professional experience in process automation,
-        database management, and software development. Passionate about building tools that solve real problems.
-      </p>
-      <div class="hero-langs">
-        <span class="lang-badge"><strong>ES</strong> Native</span>
-        <span class="lang-badge"><strong>EN</strong> Advanced</span>
-        <span class="lang-badge"><strong>PT</strong> Intermediate</span>
-        <span class="lang-badge"><strong>IT</strong> Basic</span>
-      </div>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects →</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-      </div>
+  <div class="glow"></div>
+  <div class="container">
+    <h1>Sebastian<br/><span>Alejo</span></h1><br>
+    <p class="question">Choose your language / Elige tu idioma</p>
+    <div class="buttons">
+      <a href="en.html" class="lang-btn primary">
+        <span class="flag">🇺🇸</span>
+        <span class="lang-name">English</span>
+        <span class="lang-label">Continue in English</span>
+      </a>
+      <a href="es.html" class="lang-btn">
+        <span class="flag">🇵🇪</span>
+        <span class="lang-name">Español</span>
+        <span class="lang-label">Continuar en español</span>
+      </a>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="reveal">
-      <div class="section-label">01 — About</div>
-      <h2 class="section-title">Who I am</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm a <strong>5th-year Computer Systems Engineering student</strong> at Universidad Privada del Norte, Lima. I combine strong technical knowledge in Python, SQL, and automation with real-world professional experience delivering software solutions for public and private institutions.</p>
-          <p>I've built automation systems that generated thousands of personalized documents for municipalities, created QR-based identification platforms, and provided bilingual technical support for an international company. I thrive in environments that demand analysis, problem-solving, and continuous improvement.</p>
-          <p>Beyond engineering, I speak <strong>four languages</strong> — Spanish, English, Portuguese, and Italian — which helps me collaborate across multicultural and international teams.</p>
-
-          <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1.5rem;">
-            <div class="skills-block">
-              <div class="skills-block-title">Programming Languages</div>
-              <div class="skills-grid">
-                <div class="skill-tag"><div class="skill-dot"></div>Python</div>
-                <div class="skill-tag"><div class="skill-dot"></div>SQL</div>
-                <div class="skill-tag"><div class="skill-dot"></div>Java</div>
-                <div class="skill-tag"><div class="skill-dot"></div>C#</div>
-                <div class="skill-tag"><div class="skill-dot"></div>JavaScript</div>
-              </div>
-            </div>
-            <div class="skills-block">
-              <div class="skills-block-title">Data & Databases</div>
-              <div class="skills-grid">
-                <div class="skill-tag"><div class="skill-dot"></div>Pandas</div>
-                <div class="skill-tag"><div class="skill-dot"></div>NumPy</div>
-                <div class="skill-tag"><div class="skill-dot"></div>Scikit-learn</div>
-                <div class="skill-tag"><div class="skill-dot"></div>Matplotlib</div>
-                <div class="skill-tag"><div class="skill-dot"></div>MySQL</div>
-                <div class="skill-tag"><div class="skill-dot"></div>SQLite</div>
-                <div class="skill-tag"><div class="skill-dot"></div>ReportLab</div>
-              </div>
-            </div>
-            <div class="skills-block">
-              <div class="skills-block-title">Web Development</div>
-              <div class="skills-grid">
-                <div class="skill-tag"><div class="skill-dot"></div>Django</div>
-                <div class="skill-tag"><div class="skill-dot"></div>Angular</div>
-                <div class="skill-tag"><div class="skill-dot"></div>Node.js</div>
-                <div class="skill-tag"><div class="skill-dot"></div>HTML & CSS</div>
-                <div class="skill-tag"><div class="skill-dot"></div>Bootstrap</div>
-                <div class="skill-tag"><div class="skill-dot"></div>Git & GitHub</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <div class="stat-number">5th</div>
-            <div class="stat-label">Year of Engineering</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">3+</div>
-            <div class="stat-label">Years of experience</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">6+</div>
-            <div class="stat-label">Projects delivered</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">4</div>
-            <div class="stat-label">Languages spoken</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="reveal">
-      <div class="section-label">02 — Experience</div>
-      <h2 class="section-title">Where I've worked</h2>
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="timeline-date">Jan 2026 – Mar 2026</div>
-            <div class="timeline-loc">Lima, Peru</div>
-          </div>
-          <div class="timeline-right">
-            <div class="timeline-company">Bryan Impresores & Servicios Generales</div>
-            <div class="timeline-role">Software Developer</div>
-            <ul class="timeline-bullets">
-              <li>Developed Python solutions to automate internal business processes.</li>
-              <li>Built automated document generation pipelines and managed relational databases.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="timeline-date">Oct 2025 – Jan 2026</div>
-            <div class="timeline-loc">Lima, Peru</div>
-          </div>
-          <div class="timeline-right">
-            <div class="timeline-company">DoorDash (Teleperformance Perú)</div>
-            <div class="timeline-role">Bilingual Customer Service Representative</div>
-            <ul class="timeline-bullets">
-              <li>Provided customer and driver support in English and Spanish, resolving service incidents efficiently.</li>
-              <li>Managed order, payment, and account cases via CRM tools while meeting quality and response SLAs.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="timeline-date">Jun 2025 – Sep 2025</div>
-            <div class="timeline-loc">Lima, Peru</div>
-          </div>
-          <div class="timeline-right">
-            <div class="timeline-company">Consultoría en Laboratorio S.A.C. (ICL)</div>
-            <div class="timeline-role">Educational Technology Administrator & Digital Support</div>
-            <ul class="timeline-bullets">
-              <li>Built an automated system to generate personalized academic certificates with embedded QR codes.</li>
-              <li>Managed platform content and provided digital support for academic processes.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="reveal">
-      <div class="section-label">03 — Work</div>
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-year">Feb 2026</div>
-          <h3 class="project-title">Municipal Tax Booklet Generator</h3>
-          <p class="project-client">Municipality of Independencia</p>
-          <p class="project-desc">Automated system for mass generation of personalized 2026 municipal tax booklets, processing citizen data and producing print-ready PDF documents at scale.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">ReportLab</span><span class="project-tag">SQL</span><span class="project-tag">Automation</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-year">Jan 2026</div>
-          <h3 class="project-title">Municipal Tax Booklet Generator</h3>
-          <p class="project-client">Municipality of Puente Piedra</p>
-          <p class="project-desc">Replicated and adapted the booklet generation pipeline for a second municipality, handling different dataset and layout requirements.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">ReportLab</span><span class="project-tag">SQL</span><span class="project-tag">Automation</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-year">Jun 2025</div>
-          <h3 class="project-title">Automated Academic Certification System</h3>
-          <p class="project-client">Consultoría en Laboratorio S.A.C. (ICL)</p>
-          <p class="project-desc">End-to-end system to generate and issue personalized academic certificates with QR codes for verification, replacing a fully manual process.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">QR Codes</span><span class="project-tag">PDF Generation</span><span class="project-tag">Automation</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-year">Dec 2024</div>
-          <h3 class="project-title">QR Identification System for Mototaxis</h3>
-          <p class="project-client">Municipality of Carabayllo</p>
-          <p class="project-desc">Digital identification platform for registered mototaxi units using QR codes, enabling quick verification by municipal officers in the field.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">QR Codes</span><span class="project-tag">Database</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-year">Jan–Feb 2025</div>
-          <h3 class="project-title">2025 Municipal Tax Booklets</h3>
-          <p class="project-client">Municipalities of Independencia & Puente Piedra</p>
-          <p class="project-desc">First iteration of the tax booklet automation system, establishing the core pipeline later improved for the 2026 editions across both municipalities.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">ReportLab</span><span class="project-tag">SQL</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-year">2021 – Present</div>
-          <h3 class="project-title">Personal Portfolio</h3>
-          <p class="project-client">sebastianalejo.github.io</p>
-          <p class="project-desc">Personal website to showcase projects, skills, and professional experience. Built with HTML, CSS, and JavaScript.</p>
-          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATES -->
-  <section id="certificates">
-    <div class="reveal">
-      <div class="section-label">04 — Learning</div>
-      <h2 class="section-title">Certifications</h2>
-      <div class="certs-list">
-        <a href="https://www.credly.com/badges/d73851b6-8d9f-47f3-8013-ef76f5bd79b5" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">📊</div><div><div class="cert-name">Introduction to Data Science</div><div class="cert-source">Cisco Networking Academy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2024</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <a href="https://www.credly.com/badges/c07433f6-ce94-4910-9039-498a11cc44e9" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">🐍</div><div><div class="cert-name">Python Essentials</div><div class="cert-source">Cisco Networking Academy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2024</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <div class="cert-item" style="cursor:default;">
-          <div class="cert-left"><div class="cert-icon">⚙️</div><div><div class="cert-name">Advanced Programming in C</div><div class="cert-source">Cisco Networking Academy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2023</span></div>
-        </div>
-        <a href="https://www.credly.com/badges/d4c3ed6d-5450-4c7a-a942-bfafad04dc27" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">🔐</div><div><div class="cert-name">Introduction to Cybersecurity</div><div class="cert-source">Cisco Networking Academy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2022</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <a href="https://www.credly.com/badges/3a892a32-4303-44ca-a8dc-91c543e87b01" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">📡</div><div><div class="cert-name">Introduction to IoT</div><div class="cert-source">Cisco Networking Academy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2022</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">🟨</div><div><div class="cert-name">JavaScript</div><div class="cert-source">Codecademy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2021</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">🌐</div><div><div class="cert-name">HTML</div><div class="cert-source">Codecademy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2021</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">🎨</div><div><div class="cert-name">CSS</div><div class="cert-source">Codecademy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2021</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/0595479d03627a8cb816b069000e4d06" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">⚡</div><div><div class="cert-name">Bootstrap</div><div class="cert-source">Codecademy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2021</span><span class="cert-arrow">↗</span></div>
-        </a>
-        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/3a62023b0054dc793edc0adecd715fd7" target="_blank" class="cert-item">
-          <div class="cert-left"><div class="cert-icon">📱</div><div><div class="cert-name">Responsive Design</div><div class="cert-source">Codecademy</div></div></div>
-          <div class="cert-meta"><span class="cert-year">2021</span><span class="cert-arrow">↗</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="reveal">
-      <div class="section-label">05 — Connect</div>
-      <h2 class="section-title">Let's talk</h2>
-      <div class="contact-wrapper">
-        <div class="contact-text">
-          <p>I'm always open to new opportunities, collaborations, or just a good conversation about tech. Feel free to reach out through any channel below.</p>
-          <p>I'm particularly interested in roles involving <strong style="color:var(--text)">Python automation</strong>, <strong style="color:var(--text)">data engineering</strong>, or <strong style="color:var(--text)">full-stack web development</strong>.</p>
-          <div class="contact-info">
-            <div class="contact-row">
-              <span class="contact-icon">✉</span>
-              <a href="mailto:alejovaldez2004@gmail.com">alejovaldez2004@gmail.com</a>
-            </div>
-            <div class="contact-row">
-              <span class="contact-icon">📍</span>
-              <span>Lima, Peru</span>
-            </div>
-            <div class="contact-row">
-              <span class="contact-icon">📞</span>
-              <a href="https://api.whatsapp.com/send?phone=51922934170" target="_blank">+51 922 934 170</a>
-            </div>
-          </div>
-        </div>
-        <div class="socials-grid">
-          <a href="https://www.linkedin.com/in/sebastianalejovaldez" target="_blank" class="social-card">
-            <div class="social-icon">💼</div>
-            <div><div class="social-name">LinkedIn</div><div class="social-handle">sebastianalejovaldez</div></div>
-          </a>
-          <a href="https://github.com/sebastianalejo" target="_blank" class="social-card">
-            <div class="social-icon">🐙</div>
-            <div><div class="social-name">GitHub</div><div class="social-handle">sebastianalejo</div></div>
-          </a>
-          <a href="mailto:alejovaldez2004@gmail.com" class="social-card">
-            <div class="social-icon">✉️</div>
-            <div><div class="social-name">Email</div><div class="social-handle">alejovaldez2004@gmail.com</div></div>
-          </a>
-          <a href="https://api.whatsapp.com/send?phone=51922934170" target="_blank" class="social-card">
-            <div class="social-icon">💬</div>
-            <div><div class="social-name">WhatsApp</div><div class="social-handle">Direct message</div></div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Sebastian Alejo <span class="footer-dot">·</span> Lima, Peru</p>
-    <p style="font-size:0.68rem; color:var(--muted);">Designed & built with ♥</p>
-  </footer>
-
-  <script src="script.js"></script>
-
+  </div>
 </body>
 </html>
