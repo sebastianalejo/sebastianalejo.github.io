@@ -1,51 +1,296 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 <head>
-  <title>Sebastian Alejo Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sebastián Alejo — Software Engineering Student from Lima, Peru. Passionate about IoT, Data Science, and Web Development." />
+  <title>Sebastián Alejo — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
-<body class="container bg-transparent">
-  <header class="row mt-5 mb-5">
-    <h1 class="display-1">Sebastian Alejo</h1>
-  </header>
-  <section class="row">
-    <div class="col-lg-4 col-md-6 col-sm-12 my-4">
-      <a class="btn btn-outline-dark mx-auto d-grid gap-2 py-2" href="#certificates" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="certificates"><h2 class="bg-transparent display-5">Certificates</h2></a>
-      <div class="collapse my-3 display-6" id="certificates">
-        <a class="btn btn-dark my-2" href="https://www.credly.com/badges/c07433f6-ce94-4910-9039-498a11cc44e9" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Python Essentials</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.credly.com/badges/3a892a32-4303-44ca-a8dc-91c543e87b01" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Introduction to IoT</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.credly.com/badges/d73851b6-8d9f-47f3-8013-ef76f5bd79b5" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Introduction to Data Science</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.credly.com/badges/d4c3ed6d-5450-4c7a-a942-bfafad04dc27" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Introduction to Cybersecurity</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7" target="_blanket"><p class="h4 bg-transparent my-1 text-white">HTML</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" target="_blanket"><p class="h4 bg-transparent my-1 text-white">CSS</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/3a62023b0054dc793edc0adecd715fd7" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Responsive Design</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/0595479d03627a8cb816b069000e4d06" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Bootstrap</p></a> <br>
-        <a class="btn btn-dark my-2" href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blanket"><p class="h4 bg-transparent my-1 text-white">JavaScript</p></a>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">SA/</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">📍 Lima, Peru · Open to work</div>
+      <h1 class="hero-name">Sebastián<br/><span>Alejo</span></h1>
+      <p class="hero-desc">
+        Software engineering student building things at the intersection of
+        <strong style="color:#e8e8f0">AI</strong>,
+        <strong style="color:#e8e8f0">Data Science</strong>, and
+        <strong style="color:#e8e8f0">Web Development</strong>.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Ver proyectos →</a>
+        <a href="#contact" class="btn btn-secondary">Contáctame</a>
       </div>
     </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 my-4">
-        <a class="btn btn-outline-dark mx-auto d-grid gap-2 py-2" href="#about-me" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="about-me"><h2 class="bg-transparent display-5">About me</h2></a>
-        <div class="collapse my-3 display-6" id="about-me">
-          <p>I'm a software engineer student</p>
-          <p>I currently live in Lima, Peru</p>
-          <p>22 yo</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-12 col-sm-12 my-4">
-        <a class="btn btn-outline-dark mx-auto d-grid gap-2 py-2" href="#contact" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="contact"><h2 class="bg-transparent display-5">Contact</h2></a>
-        <div class="collapse my-3 display-6" id="contact">
-          <a class="btn btn-dark my-2" href="https://www.linkedin.com/in/sebastianalejovaldez" target="_blanket"><p class="h4 bg-transparent my-1 text-white">LinkedIn</p></a> <br>
-          <a class="btn btn-dark my-2" href="https://github.com/sebastianalejo" target="_blanket"><p class="h4 bg-transparent my-1 text-white">GitHub</p></a> <br>
-          <a class="btn btn-dark my-2" href="https://www.instagram.com/salejovaldez/" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Instagram</p></a> <br>
-          <a class="btn btn-dark my-2" href="https://open.spotify.com/user/alejovaldez24?si=44b56c2497454f52" target="_blanket"><p class="h4 bg-transparent my-1 text-white">Spotify</p></a> <br>
-          <a class="btn btn-dark my-2" href="https://api.whatsapp.com/send?phone=51922934170" target="_blanket"><p class="h4 bg-transparent my-1 text-white">WhatsApp</p></a>
-        </div>
-      </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="reveal">
+      <div class="section-label">01 — About</div>
+      <h2 class="section-title">Quién soy</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Soy estudiante de Ingeniería de Software con 22 años, apasionado por crear soluciones tecnológicas que impacten el mundo real. Combino conocimientos en <strong>AI</strong>, <strong>Data Science</strong> y <strong>desarrollo web</strong> para construir proyectos completos de principio a fin.</p>
+          <p>Me interesa profundamente cómo los datos pueden contar historias y cómo los sistemas conectados pueden hacer nuestra vida más inteligente. Siempre estoy aprendiendo y buscando nuevos desafíos.</p>
+          <p>Actualmente basado en <strong>Lima, Perú</strong> y abierto a oportunidades remotas y presenciales.</p>
+
+          <div style="margin-top:2rem;">
+            <div class="section-label" style="margin-bottom:1rem; font-size:0.6rem;">Tecnologías</div>
+            <div class="skills-grid">
+              <div class="skill-tag"><div class="skill-dot"></div>Python</div>
+              <div class="skill-tag"><div class="skill-dot"></div>JavaScript</div>
+              <div class="skill-tag"><div class="skill-dot"></div>HTML & CSS</div>
+              <div class="skill-tag"><div class="skill-dot"></div>Bootstrap</div>
+              <div class="skill-tag"><div class="skill-dot"></div>IoT</div>
+              <div class="skill-tag"><div class="skill-dot"></div>Data Science</div>
+              <div class="skill-tag"><div class="skill-dot"></div>Cybersecurity</div>
+              <div class="skill-tag"><div class="skill-dot"></div>Git & GitHub</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">9+</div>
+            <div class="stat-label">Certificados obtenidos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">22</div>
+            <div class="stat-label">Años de edad</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Tecnologías dominadas</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Ganas de aprender</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="section-label">02 — Work</div>
+      <h2 class="section-title">Proyectos</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-number">01</div>
+          <h3 class="project-title">Portfolio Personal</h3>
+          <p class="project-desc">Sitio web personal para mostrar mis habilidades, certificados y proyectos. Construido con HTML, CSS y JavaScript vanilla.</p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sebastianalejo.github.io/" target="_blank" class="project-link">↗ Live</a>
+            <a href="https://github.com/sebastianalejo" target="_blank" class="project-link">⌥ GitHub</a>
+          </div>
+        </div>
+
+        <!-- <div class="project-card" style="border-style: dashed; opacity: 0.6;">
+          <div class="project-number">02</div>
+          <h3 class="project-title">Próximamente...</h3>
+          <p class="project-desc">Agrega aquí tu siguiente proyecto. IoT, Data Science, una app web — ¡lo que estés construyendo!</p>
+          <div class="project-tags">
+            <span class="project-tag">En progreso</span>
+          </div>
+        </div> -->
+
+        <!-- <div class="project-card" style="border-style: dashed; opacity: 0.6;">
+          <div class="project-number">03</div>
+          <h3 class="project-title">Próximamente...</h3>
+          <p class="project-desc">¿Un proyecto de Data Science? ¿Un dashboard? ¿Un sistema IoT? El espacio es tuyo.</p>
+          <div class="project-tags">
+            <span class="project-tag">En progreso</span>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="reveal">
+      <div class="section-label">03 — Learning</div>
+      <h2 class="section-title">Certificados</h2>
+      <div class="certs-list">
+        <a href="https://www.credly.com/badges/c07433f6-ce94-4910-9039-498a11cc44e9" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">🐍</div>
+            <div>
+              <div class="cert-name">Python Essentials</div>
+              <div class="cert-source">Cisco Networking Academy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.credly.com/badges/3a892a32-4303-44ca-a8dc-91c543e87b01" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">📡</div>
+            <div>
+              <div class="cert-name">Introduction to IoT</div>
+              <div class="cert-source">Cisco Networking Academy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.credly.com/badges/d73851b6-8d9f-47f3-8013-ef76f5bd79b5" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">📊</div>
+            <div>
+              <div class="cert-name">Introduction to Data Science</div>
+              <div class="cert-source">Cisco Networking Academy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.credly.com/badges/d4c3ed6d-5450-4c7a-a942-bfafad04dc27" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">🔐</div>
+            <div>
+              <div class="cert-name">Introduction to Cybersecurity</div>
+              <div class="cert-source">Cisco Networking Academy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">🌐</div>
+            <div>
+              <div class="cert-name">HTML</div>
+              <div class="cert-source">Codecademy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">🎨</div>
+            <div>
+              <div class="cert-name">CSS</div>
+              <div class="cert-source">Codecademy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/3a62023b0054dc793edc0adecd715fd7" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">📱</div>
+            <div>
+              <div class="cert-name">Responsive Design</div>
+              <div class="cert-source">Codecademy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/0595479d03627a8cb816b069000e4d06" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">⚡</div>
+            <div>
+              <div class="cert-name">Bootstrap</div>
+              <div class="cert-source">Codecademy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+        <a href="https://www.codecademy.com/profiles/sebastianalejo24/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" class="cert-item">
+          <div class="cert-left">
+            <div class="cert-icon">🟨</div>
+            <div>
+              <div class="cert-name">JavaScript</div>
+              <div class="cert-source">Codecademy</div>
+            </div>
+          </div>
+          <span class="cert-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="reveal">
+      <div class="section-label">04 — Connect</div>
+      <h2 class="section-title">Hablemos</h2>
+      <div class="contact-wrapper">
+        <div class="contact-text">
+          <p>¿Tienes un proyecto en mente, una propuesta de trabajo o simplemente quieres conectar? Mi bandeja de entrada está siempre abierta.</p>
+          <p>También puedes encontrarme en mis redes sociales:</p>
+          <a href="https://www.linkedin.com/in/sebastianalejovaldez" class="contact-email">LinkedIn ↗</a>
+        </div>
+        <div class="socials-grid">
+          <a href="https://www.linkedin.com/in/sebastianalejovaldez" target="_blank" class="social-card">
+            <div class="social-icon">💼</div>
+            <div>
+              <div class="social-name">LinkedIn</div>
+              <div class="social-handle">sebastianalejovaldez</div>
+            </div>
+          </a>
+          <a href="https://github.com/sebastianalejo" target="_blank" class="social-card">
+            <div class="social-icon">🐙</div>
+            <div>
+              <div class="social-name">GitHub</div>
+              <div class="social-handle">sebastianalejo</div>
+            </div>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=51922934170" target="_blank" class="social-card">
+            <div class="social-icon">💬</div>
+            <div>
+              <div class="social-name">WhatsApp</div>
+              <div class="social-handle">Mensaje directo</div>
+            </div>
+          </a>
+          <a href="https://open.spotify.com/user/alejovaldez24" target="_blank" class="social-card">
+            <div class="social-icon">🎵</div>
+            <div>
+              <div class="social-name">Spotify</div>
+              <div class="social-handle">alejovaldez24</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Sebastián Alejo <span class="footer-dot">·</span> Lima, Perú</p>
+    <p style="color: var(--muted); font-size: 0.68rem;">Diseñado & construido con ♥</p>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
