@@ -1,3 +1,4 @@
+    html, body { max-width: 100%; overflow-x: hidden; }
     :root {
       --bg: #0a0a0f;
       --surface: #111118;
@@ -254,13 +255,23 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 768px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .nav-links { display: none; }
-      section { padding: 5rem 1.5rem; }
-      .hero { padding: 8rem 1.5rem 4rem; }
-      .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
-      .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
-      .timeline-left { text-align: left; }
-      .socials-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .hero { padding: 6rem 1.5rem 3rem; overflow: hidden; }
+    .hero-content { width: 100%; }
+    .hero-tag { font-size: 0.6rem; letter-spacing: 0.1em; padding: 0.35rem 0.75rem; max-width: 100%; }
+    .hero-name { font-size: clamp(2rem, 10vw, 4rem); word-break: break-word; }
+    .hero-role { font-size: 0.65rem; letter-spacing: 0.06em; padding: 0 0.5rem; }
+    .hero-desc { font-size: 0.8rem; padding: 0 0.25rem; }
+    .hero-langs { gap: 0.4rem; padding: 0 0.25rem; }
+    .lang-badge { font-size: 0.6rem; padding: 0.25rem 0.5rem; }
+    .hero-cta { flex-direction: column; align-items: center; padding: 0 1rem; }
+    .btn { width: 100%; max-width: 100%; justify-content: center; }
+    .scroll-hint { display: none; }
+    .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .timeline-left { text-align: left; }
+    .socials-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
     }
