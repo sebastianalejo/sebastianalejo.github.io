@@ -115,7 +115,10 @@
       background: rgba(127,255,212,0.05); border: 1px solid rgba(127,255,212,0.15);
       border-radius: 999px; color: var(--muted);
     }
-    .lang-badge strong { color: var(--accent); }
+    .lang-badge strong {
+      color: var(--accent);
+      font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    }
     .hero-cta {
       display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
       opacity: 0; animation: fadeUp 0.6s 0.8s forwards;
@@ -153,9 +156,21 @@
     }
 
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .about-photo-wrap { margin-bottom: 1.4rem; }
+    .about-photo {
+      width: min(100%, 420px);
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 38px rgba(0,0,0,0.3);
+      display: block;
+      object-fit: cover;
+    }
     .about-text p { color: var(--muted); line-height: 1.9; font-size: 0.88rem; margin-bottom: 1.2rem; }
     .about-text p strong { color: var(--text); font-weight: 500; }
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .about-stats .about-photo-wrap { grid-column: 1 / -1; margin-bottom: 0.2rem; }
+    .about-stats .about-photo { width: 100%; max-width: 100%; }
     .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; transition: border-color 0.2s, transform 0.2s; }
     .stat-card:hover { border-color: rgba(127,255,212,0.3); transform: translateY(-3px); }
     .stat-number { font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
@@ -206,6 +221,30 @@
     .project-title { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
     .project-client { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.75rem; }
     .project-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 1.2rem; }
+    .project-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      margin: 1rem 0 0;
+      padding: 0.55rem 1rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--accent);
+      background: rgba(127,255,212,0.08);
+      border: 1px solid rgba(127,255,212,0.2);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .project-link-btn:hover {
+      color: #0a0a0f;
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(127,255,212,0.22);
+    }
     .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .project-tag { font-size: 0.65rem; padding: 0.25rem 0.6rem; background: rgba(127,255,212,0.07); color: var(--accent); border-radius: 4px; border: 1px solid rgba(127,255,212,0.15); }
 
@@ -242,6 +281,12 @@
     .social-icon { font-size: 1.3rem; }
     .social-name { font-size: 0.8rem; }
     .social-handle { font-size: 0.68rem; color: var(--muted); }
+    
+    /* Social Network Brand Colors */
+    .socials-grid .social-card:nth-child(1) .social-icon { color: #0077B5; } /* LinkedIn */
+    .socials-grid .social-card:nth-child(2) .social-icon { color: #FFFFFF; } /* GitHub */
+    .socials-grid .social-card:nth-child(3) .social-icon { color: #EA4335; } /* Email */
+    .socials-grid .social-card:nth-child(4) .social-icon { color: #25D366; } /* WhatsApp */
 
     footer { border-top: 1px solid var(--border); padding: 2rem 4rem; display: flex; align-items: center; justify-content: space-between; }
     footer p { font-size: 0.72rem; color: var(--muted); }
@@ -274,4 +319,15 @@
     .timeline-left { text-align: left; }
     .socials-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    }
+
+    @media (max-height: 820px) and (min-width: 769px) {
+    .hero { padding: 6.25rem 3rem 2.5rem; }
+    .hero-tag { margin-bottom: 1.25rem; }
+    .hero-name { font-size: clamp(2.8rem, 8vw, 6rem); margin-bottom: 0.6rem; }
+    .hero-role { margin-bottom: 1rem; }
+    .hero-desc { font-size: 0.82rem; line-height: 1.65; margin: 0 auto 1rem; }
+    .hero-langs { margin-bottom: 1.4rem; }
+    .btn { padding: 0.7rem 1.6rem; }
+    .scroll-hint { display: none; }
     }
