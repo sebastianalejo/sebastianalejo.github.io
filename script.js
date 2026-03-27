@@ -241,7 +241,8 @@
       const language = document.documentElement.lang && document.documentElement.lang.startsWith('es') ? 'es' : 'en';
       if (!track || !stages.length || !dateEl || !companyEl || !roleEl) return;
 
-      let activeIndex = Math.max(stages.findIndex(stage => stage.classList.contains('is-active')), 0);
+      const initialActiveIndex = Math.max(stages.findIndex(stage => stage.classList.contains('is-active')), 0);
+      let activeIndex = -1;
 
       const parsePoints = (active) => {
         if (!active) return [];
@@ -414,7 +415,7 @@
         return Math.floor(ratio * stages.length);
       };
 
-      setActive(activeIndex);
+      setActive(initialActiveIndex);
 
       yearButtons.forEach(button => {
         const group = button.closest('.project-year-group');

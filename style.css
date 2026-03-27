@@ -769,7 +769,12 @@
     .hero { min-height: 100svh; min-height: 100dvh; padding: 6rem 1.5rem 2rem; overflow: hidden; }
     .hero-content { width: 100%; padding: 1.35rem 1rem; border-radius: 16px; }
     .hero-tag { font-size: 0.6rem; letter-spacing: 0.1em; padding: 0.35rem 0.75rem; max-width: 100%; }
-    .hero-name { font-size: clamp(2rem, 10vw, 4rem); word-break: break-word; }
+    .hero-name {
+      font-size: clamp(1.85rem, 8.8vw, 3.8rem);
+      word-break: normal;
+      overflow-wrap: normal;
+      white-space: nowrap;
+    }
     .hero-role { font-size: 0.65rem; letter-spacing: 0.06em; padding: 0 0.5rem; }
     .hero-desc { font-size: 0.8rem; padding: 0 0.25rem; }
     .hero-langs { gap: 0.4rem; padding: 0 0.25rem; }
